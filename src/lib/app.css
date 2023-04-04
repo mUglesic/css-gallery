@@ -49,9 +49,7 @@ a {
 
 }
 
-/* @media (prefers-color-scheme: light) {
-    :root {
-        color: var(--text-color-dark);
-        background-color: #ffffff;
-    }
-} */
+@keyframes breathe {
+    from {transform: scale(1)}
+    to {transform: scale(1.1)}
+}

@@ -216,10 +216,5 @@
         border-bottom: var(--text-color) solid 2px;
 
     }
-
-    @keyframes breathe {
-        from {transform: scale(1)}
-        to {transform: scale(1.1)}
-    }
     
 </style>

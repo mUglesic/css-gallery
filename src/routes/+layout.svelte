@@ -19,9 +19,10 @@
         <li class="header-item">
             <a href="buttons">Buttons</a>
         </li>
+        <li class="header-item">
+            <a href="loading">Loading Animations</a>
+        </li>
     </ul>
-
-    <div style="flex: 1;"></div>
 
 </header>
 
@@ -64,7 +65,7 @@
 
         font-family: 'Major Mono Display', 'Courier New', Courier, monospace;
 
-        flex: 2;
+        flex: 3;
 
         font-size: 2.5rem;
         line-height: 1.6;
@@ -79,7 +80,7 @@
 
         font-family: 'Major Mono Display', 'Courier New', Courier, monospace;
         
-        flex: 5;
+        flex: 7;
 
         font-size: 1.2rem;
         text-transform: lowercase;
