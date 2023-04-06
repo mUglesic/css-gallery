@@ -69,6 +69,24 @@
 
             <div class="animation-container">
 
+                <svg id="shapes-1" viewBox="0 0 100 100">
+                    <path d="M 20 20 v 60 h 60 v -60 h -60" stroke-width="10"></path>
+                </svg>
+
+                <svg id="shapes-2" viewBox="0 0 100 100">
+                    <path d="M 75 50 A 25 25 0 1 1 74.9962 49.5637" stroke-width="10" stroke-linecap="round"></path>
+                </svg>
+
+                <svg id="shapes-3" viewBox="0 0 100 100">
+                    <line x1="30" y1="20" x2="70" y2="20"></line>
+                    <!-- <path d="M 35 20 C 30 38, 40 42, 43 45 S 47 50, 47 50 S 43 55, 43 55 S 30 62, 35 80" stroke-linejoin="round"></path> -->
+                    <path d="M 35 20 C 30 38, 40 42, 43 45 S 47 50, 45 52" stroke-linejoin="round"></path>
+                    <path d="M 35 80 C 30 62, 40 58, 43 55 S 47 50, 45 48" stroke-linejoin="round"></path>
+                    <path d="M 65 20 C 70 38, 60 42, 57 45 S 53 50, 55 52" stroke-linejoin="round"></path>
+                    <path d="M 65 80 C 70 62, 60 58, 57 55 S 53 50, 55 48" stroke-linejoin="round"></path>
+                    <line x1="30" y1="80" x2="70" y2="80"></line>
+                </svg>
+
             </div>
 
         </section>
@@ -217,7 +235,7 @@
 
         fill: var(--text-color);
 
-        animation: bouncing_bar 2000ms infinite alternate ease-in-out;
+        animation: bouncing_bar 1000ms infinite alternate ease-in-out;
 
     }
 
@@ -241,6 +259,133 @@
     /* End Bars 3 */
 
     /* End Bars */
+
+    /* Shapes */
+
+    /* Shapes 1 */
+
+    #shapes-1 path {
+
+        fill: transparent;
+        stroke: var(--text-color);
+
+        transform-origin: center;
+
+        stroke-dasharray: 500;
+        stroke-dashoffset: 500;
+
+        stroke-linecap: round;
+        stroke-linejoin: round;
+
+        animation: square_spin 5s ease-in-out alternate infinite;
+
+    }
+
+    @keyframes square_spin {
+
+        0% {
+            stroke-dashoffset: 500;
+            rotate: 0deg;
+        }
+        33% {
+            stroke-dashoffset: 0;
+            rotate: 0deg;
+        }
+        66% {
+            stroke-dashoffset: 0;
+            rotate: 540deg;
+        }
+        100% {
+            stroke-dashoffset: 500;
+            rotate: 540deg;
+        }
+
+    }
+
+    /* End Shapes 1 */
+
+    /* Shapes 2 */
+
+    #shapes-2 path {
+
+        fill: transparent;
+        stroke: var(--text-color);
+
+        transform-origin: center;
+
+        stroke-dasharray: 157;
+        stroke-dashoffset: 157;
+
+        animation: circle_spin 2500ms infinite ease;
+
+    }
+
+    @keyframes circle_spin {
+
+        0% {
+            stroke-dashoffset: 157;
+            rotate: 0deg;
+        }
+        33% {
+            stroke-dashoffset: 71;
+            rotate: 270deg;
+        }
+        100% {
+            stroke-dashoffset: 0;
+            rotate: 720deg;
+        }
+
+    }
+
+    /* End Shapes 2 */
+
+    /* Shapes 3 */
+
+    #shapes-3 {
+
+        fill: transparent;
+        stroke: var(--text-color);
+
+    }
+
+    #shapes-3 line {
+
+        stroke-width: 8;
+        stroke-linecap: round;
+
+    }
+
+    #shapes-3 path {
+
+        stroke-width: 5;
+
+    }
+
+    #shapes-3 :is(line, path) {
+
+        transform-origin: center;
+
+        animation: flip_hourglass 3000ms ease infinite;
+
+    }
+
+    @keyframes flip_hourglass {
+
+        0% {
+            rotate: 0deg;
+        }
+        20% {
+            rotate: 180deg;
+        }
+        100% {
+            rotate: 180deg;
+        }
+
+    }
+
+    /* End Shapes 3 */
+
+    /* End Shapes */
 
     /* End Animations */
 
