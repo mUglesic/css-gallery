@@ -1,6 +1,4 @@
 
-<!-- three dots | loading bar | loading circle -->
-
 <script lang="ts">
 
 </script>
@@ -79,7 +77,6 @@
 
                 <svg id="shapes-3" viewBox="0 0 100 100">
                     <line x1="30" y1="20" x2="70" y2="20"></line>
-                    <!-- <path d="M 35 20 C 30 38, 40 42, 43 45 S 47 50, 47 50 S 43 55, 43 55 S 30 62, 35 80" stroke-linejoin="round"></path> -->
                     <path d="M 35 20 C 30 38, 40 42, 43 45 S 47 50, 45 52" stroke-linejoin="round"></path>
                     <path d="M 35 80 C 30 62, 40 58, 43 55 S 47 50, 45 48" stroke-linejoin="round"></path>
                     <path d="M 65 20 C 70 38, 60 42, 57 45 S 53 50, 55 52" stroke-linejoin="round"></path>
@@ -316,7 +313,7 @@
         stroke-dasharray: 157;
         stroke-dashoffset: 157;
 
-        animation: circle_spin 2500ms infinite ease;
+        animation: circle_spin 2500ms infinite ease-in-out;
 
     }
 
@@ -327,11 +324,11 @@
             rotate: 0deg;
         }
         33% {
-            stroke-dashoffset: 71;
+            stroke-dashoffset: 54;
             rotate: 270deg;
         }
         100% {
-            stroke-dashoffset: 0;
+            stroke-dashoffset: -156;
             rotate: 720deg;
         }
 
