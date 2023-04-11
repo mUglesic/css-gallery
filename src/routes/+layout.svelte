@@ -22,6 +22,9 @@
         <li class="header-item">
             <a href="loading">Loading Animations</a>
         </li>
+        <li class="header-item">
+            <a href="cards">Cards</a>
+        </li>
     </ul>
 
 </header>
