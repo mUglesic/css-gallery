@@ -256,6 +256,12 @@
 
         background: hsl(209, 45%, 15%);
 
+        background-image: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.1),
+            transparent
+        );
+
         border-radius: 1em;
         border: unset;
 

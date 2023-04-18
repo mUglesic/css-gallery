@@ -27,8 +27,15 @@
                     <circle cx="80" cy="25"></circle>
                 </svg>
 
-                <svg viewBox="0 0 100 100">
-
+                <svg id="dots-3" viewBox="0 0 100 100">
+                    <circle></circle>
+                    <circle></circle>
+                    <circle></circle>
+                    <circle></circle>
+                    <circle></circle>
+                    <circle></circle>
+                    <circle></circle>
+                    <circle></circle>
                 </svg>
 
             </div>
@@ -52,7 +59,7 @@
                 </svg>
 
                 <svg id="bars-3" viewBox="0 0 100 20">
-                    <rect width="80" height="10" x="10" y="5" rx="5"></rect>
+                    <line x1="10" y1="10" x2="90" y2="10"></line>
                 </svg>
 
             </div>
@@ -138,9 +145,9 @@
 
         fill: var(--text-color);
 
-        r: 5px;
+        r: 0px;
 
-        animation: dots_pulse 1500ms infinite ease-in-out;
+        animation: dots_pulse 2000ms infinite cubic-bezier(.99,0,.44,.97);
 
     }
 
@@ -194,9 +201,36 @@
 
     /* Dots 3 */
 
+    $radius-3: 30px;
+    $n-3: 8;
+
     #dots-3 circle {
 
+        fill: var(--text-color);
 
+        r: 8px;
+
+        transform-origin: center;
+
+        animation: spin 2500ms linear infinite;
+
+    }
+
+    @for $i from 1 through $n-3 {
+
+        #dots-3 circle:nth-child(#{$i}) {
+
+            cx: calc(50px + $radius-3 * cos(calc(($i - 1) * 360deg / $n-3)));
+            cy: calc(50px + $radius-3 * sin(calc(($i - 1) * 360deg / $n-3)));
+
+        }
+
+    }
+
+    @keyframes spin {
+
+        0% {rotate: 0deg}
+        100% {rotate: 360deg}
 
     }
 
@@ -247,9 +281,25 @@
 
     /* Bars 3 */
 
-    #bars-3 rect {
+    #bars-3 line {
 
-        fill: var(--text-color);
+        // fill: var(--text-color);
+        stroke: var(--text-color);
+
+        stroke-dasharray: 80;
+        stroke-dashoffset: 80;
+
+        stroke-width: 10;
+        stroke-linecap: round;
+
+        animation: spring_bar 1000ms cubic-bezier(.9,0,.1,1) infinite alternate;
+
+    }
+
+    @keyframes spring_bar {
+
+        0% {stroke-dashoffset: 80}
+        100% {stroke-dashoffset: -80}
 
     }
 
