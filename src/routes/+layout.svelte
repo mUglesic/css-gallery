@@ -2,28 +2,29 @@
 <script lang="ts">
 
     import '$lib/app.css';
+    import { base } from '$app/paths';
 
 </script>
 
 <header>
     
-    <h1 class="header-title"><a href="/">CSS Gallery</a></h1>
+    <h1 class="header-title"><a href="{base}/">CSS Gallery</a></h1>
 
     <ul class="header-items">
         <li class="header-item">
-            <a href="hamburgers">Hamburgers</a>
+            <a href="{base}/hamburgers">Hamburgers</a>
         </li>
         <li class="header-item">
-            <a href="text">Fancy Text</a>
+            <a href="{base}/text">Fancy Text</a>
         </li>
         <li class="header-item">
-            <a href="buttons">Buttons</a>
+            <a href="{base}/buttons">Buttons</a>
         </li>
         <li class="header-item">
-            <a href="loading">Loading Animations</a>
+            <a href="{base}/loading">Loading Animations</a>
         </li>
         <li class="header-item">
-            <a href="cards">Cards</a>
+            <a href="{base}/cards">Cards</a>
         </li>
     </ul>
 

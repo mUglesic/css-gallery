@@ -1,7 +1,7 @@
 
 <script lang="ts">
 
-    // import ipsum_qr from '/ipsum.png';
+    import { base } from '$app/paths';
 
 </script>
 
@@ -34,7 +34,7 @@
         </div>
 
         <div id="card-4" class="card">
-            <img alt="Card Background" src="/ipsum.png">
+            <img alt="Card Background" src="{base}/ipsum.png">
         </div>
 
         <div id="card-5" class="card">
