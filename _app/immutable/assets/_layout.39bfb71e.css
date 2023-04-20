@@ -1,0 +1,65 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap'); */
+
+@font-face {
+    font-family: 'Major Mono Display';
+    src: url('/css-gallery/fonts/MajorMonoDisplay-Regular.ttf');
+}
+
+@font-face {
+    font-family: Inter;
+    src: url('/css-gallery/fonts/Inter-VariableFont_slnt,wght.ttf');
+}
+
+body {
+
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /* place-items: center; */
+    min-width: 320px;
+    min-height: 100vh;
+
+}
+
+:root {
+
+    --text-color: #f5f5dc;
+    --text-color-dark: #213547;
+
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: var(--text-color);
+    background-color: #15222E;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+}
+
+main {
+
+    min-width: 50%;
+    max-width: 80%;
+    margin: 0 auto;
+
+}
+
+a {
+
+    text-decoration: none;
+    color: var(--text-color);
+
+}
+
+@keyframes breathe {
+    from {transform: scale(1)}
+    to {transform: scale(1.1)}
+}header.svelte-xxh2fd{position:sticky;top:0;width:100%;z-index:2;display:flex;isolation:isolate;margin-bottom:5rem}header.svelte-xxh2fd::before{content:'';position:absolute;inset:-2rem 0 0 0;z-index:-1;background:rgb(52,217,178);background:linear-gradient(56deg, rgba(52,217,178,1) 0%, rgba(0,100,224,1) 100%);transform:skewY(-0.75deg)}.header-title.svelte-xxh2fd{font-family:'Major Mono Display', 'Courier New', Courier, monospace;flex:3;font-size:2.5rem;line-height:1.6;text-align:center;white-space:nowrap;text-transform:uppercase}.header-items.svelte-xxh2fd{font-family:'Major Mono Display', 'Courier New', Courier, monospace;flex:7;font-size:1.2rem;text-transform:lowercase;display:flex;flex-wrap:wrap;justify-content:space-around;align-items:center;padding:0;list-style:none}.header-item.svelte-xxh2fd{transition:scale 75ms, translate 200ms}.header-item.svelte-xxh2fd:hover{text-transform:capitalize;scale:1.07;translate:0px -2px}
