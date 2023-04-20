@@ -1,6 +1,8 @@
 
 <script lang="ts">
 
+    // import ipsum_qr from '/ipsum.png';
+
 </script>
 
 <main>
@@ -32,12 +34,12 @@
         </div>
 
         <div id="card-4" class="card">
-            <!-- <img alt="Card Background" src="https://images.unsplash.com/photo-1610247948543-28d438fd094b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"> -->
+            <img alt="Card Background" src="/ipsum.png">
         </div>
 
-        <!-- <div class="card">
-            <img alt="Card Background" src="https://images.unsplash.com/photo-1611608789326-10beac1c8f56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1970&q=80">
-        </div> -->
+        <div id="card-5" class="card">
+            <div class="sliding-gradient"></div>
+        </div>
 
     </div>
 
@@ -264,6 +266,69 @@
 
         border-radius: 1em;
         border: unset;
+
+        overflow: visible;
+
+    }
+
+    #card-4 img {
+
+        z-index: unset;
+
+        top: 50%;
+        left: 50%;
+
+        translate: -50% -50%;
+
+        width: 15em;
+        height: unset;
+        aspect-ratio: 1 / 1;
+
+        box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
+
+        object-fit: unset;
+
+        transition: scale 250ms, transform 400ms;
+
+    }
+
+    #card-4:hover img {
+
+        scale: 1.5;
+        transform: translateY(-5px);
+
+    }
+
+    #card-5 {
+
+        background: rgba(255, 255, 255, 0.1);
+
+        border-radius: 2em;
+        border: unset;
+        /* border: 0.25em solid rgba(255, 255, 255, 0.5); */
+
+    }
+
+    #card-5 .sliding-gradient {
+
+        position: absolute;
+
+        inset: -20%;
+
+        rotate: 10deg;
+        filter: blur(8px);
+
+        transform: translateX(-100%);
+
+        background-image: linear-gradient(45deg, rgba(52,217,178,1) 0%, rgba(0,100,224,1) 100%);
+
+        transition: transform 300ms cubic-bezier(.33,.77,.58,.92);
+
+    }
+
+    #card-5:hover .sliding-gradient {
+
+        transform: translateX(0%);
 
     }
 
