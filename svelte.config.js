@@ -10,13 +10,7 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: adapter({
-            pages: 'docs',
-            assets: 'docs',
-            fallback: null,
-            precompress: false,
-            strict: true
-        }),
+		adapter: adapter(),
 		paths: {
 			base: dev ? '' : '/css-gallery'
 		}
