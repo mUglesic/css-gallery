@@ -26,6 +26,9 @@
         <li class="header-item">
             <a href="{base}/cards">Cards</a>
         </li>
+        <li class="header-item">
+            <a href="{base}/audio">Audio</a>
+        </li>
     </ul>
 
 </header>
