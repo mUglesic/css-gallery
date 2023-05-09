@@ -53,7 +53,7 @@
 
     <div class="wrapper">
 
-        <span style="font-size: 16pt;">Russian Dance - Tchaikovsky Nutcracker Suite</span>
+        <span style="font-size: 1.4em;">Russian Dance - Tchaikovsky Nutcracker Suite</span>
         <span>Conducted by <a href="https://pmmusic.pro/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Philip Milman</a></span>
 
         <div style="display: flex; gap: 5px;">
@@ -107,6 +107,8 @@
 
         font-family: 'Major Mono Display', monospace;
 
+        text-align: center;
+
         text-transform: lowercase;
 
     }
@@ -145,6 +147,22 @@
         height: min(var(--bar-height), 200px);
 
         transition: height 50ms ease-in-out;
+
+    }
+
+    @media (max-width: 500px) {
+
+        .wrapper {
+
+            max-width: 100%;
+
+        }
+
+        .visualizer {
+
+            scale: calc(var(--vis-scale) * 0.7);
+
+        }
 
     }
 

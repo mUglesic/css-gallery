@@ -81,8 +81,7 @@
 
     <section>
 
-        <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-        <span on:mouseover={() => showGlitch()} class="glitch">{gl}</span>
+        <span on:mouseover={() => showGlitch()} on:focus={() => showGlitch()} class="glitch" tabindex="-1">{gl}</span>
         <span class="pointer">&larr; hover over me!</span>
 
     </section>
@@ -93,11 +92,11 @@
 
         {#each ri.split(' ') as word, i}
 
-            <div class="word">
+            <div class="word" tabindex="-1">
 
                 {#each word as letter}
 
-                    <div class="letter-wrapper">
+                    <div class="letter-wrapper" tabindex="-1">
                         <span class="letter">{letter}</span>
                     </div>
 
@@ -113,7 +112,7 @@
 
         {/each}
 
-        <span class="pointer" style="animation-duration: 700ms; translate: 170px -100px;">&larr; hover over me!</span>
+        <!-- <span class="pointer" style="animation-duration: 700ms; translate: 170px -100px;">&larr; hover over me!</span> -->
         
     </section>
 
@@ -166,7 +165,8 @@
 
     }
 
-    .word:hover {
+    .word:hover,
+    .word:focus {
 
         color: rgba(0,100,224,1);
         
@@ -189,7 +189,8 @@
 
     }
 
-    .letter-wrapper:hover .letter {
+    .letter-wrapper:hover .letter,
+    .letter-wrapper:focus .letter {
 
         color: rgba(52,217,178,1);
         

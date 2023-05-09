@@ -28,7 +28,7 @@
 
                         </button>
 
-                        <span class="pointer" style:animation-duration="{800 + (i * 100)}ms">&larr; {i === 2 ? 'DO NOT' : ''} click me!</span>
+                        <span class="pointer" style:animation-duration="{800 + (i * 100)}ms">&larr;{#if i === 2} DO NOT<br/> {/if}click me!</span>
 
                     </div>
 
@@ -141,6 +141,34 @@
     .hamburger:hover {
 
         cursor: pointer;
+
+    }
+
+    @media (max-width: 720px) {
+
+        h2 {
+
+            margin-bottom: 1em;
+
+        }
+
+        .hamburger-container {
+
+            gap: 4em;
+
+        }
+
+        .hamburger {
+
+            width: 4em;
+
+        }
+
+        .pointer {
+
+            display: none;
+
+        }
 
     }
 

@@ -1,7 +1,7 @@
 
 <script lang="ts">
 
-    const weirdSegments: number = 15;
+    // const weirdSegments: number = 15;
 
 </script>
 
@@ -15,14 +15,14 @@
 
         <button class="fancy-button">Fancy</button>
 
-        <div class="weird-button">
+        <!-- <div class="weird-button">
             <div class="gradient-border"></div>
             <button class="weird-button-under">Weird</button>
             {#each {length: weirdSegments} as _}
                 <div class="weird-button-segment"></div>
             {/each}
             <span class="weird-button-over">Weird</span>
-        </div>
+        </div> -->
 
     </div>
 
@@ -30,7 +30,7 @@
 
 <style lang="scss">
 
-    $segmentCount: 15;
+    // $segmentCount: 15;
 
     main {
 
@@ -41,6 +41,9 @@
     .type-select {
 
         display: flex;
+        flex-wrap: wrap;
+
+        gap: 10px;
 
         justify-content: space-around;
 
@@ -165,104 +168,104 @@
 
     }
 
-    .weird-button {
+    // .weird-button {
 
-        position: relative;
-        isolation: isolate;
+    //     position: relative;
+    //     isolation: isolate;
 
-        cursor: pointer;
+    //     cursor: pointer;
 
-        width: 7em;
+    //     width: 7em;
 
-        display: grid;
+    //     display: grid;
 
-        grid-template-columns: repeat(5, 1fr);
+    //     grid-template-columns: repeat(5, 1fr);
 
-    }
+    // }
 
-    .weird-button .weird-button-segment {
+    // .weird-button .weird-button-segment {
 
-        pointer-events: none;
+    //     pointer-events: none;
 
-        background-color: hsl(167, 30%, 50%);
+    //     background-color: hsl(167, 30%, 50%);
 
-        transition: translate 150ms ease-out, rotate 100ms ease-out;
+    //     transition: translate 150ms ease-out, rotate 100ms ease-out;
 
-    }
+    // }
 
-    .weird-button-under {
+    // .weird-button-under {
 
-        position: absolute;
-        z-index: -1;
+    //     position: absolute;
+    //     z-index: -1;
 
-        top: 50%;
-        left: 50%;
-        translate: -50% -50%;
+    //     top: 50%;
+    //     left: 50%;
+    //     translate: -50% -50%;
 
-        background: #15222E;
+    //     background: #15222E;
 
-        border: none;
-        border-radius: 0.5em;
+    //     border: none;
+    //     border-radius: 0.5em;
 
-    }
+    // }
 
-    .gradient-border {
+    // .gradient-border {
         
-        position: absolute;
-        z-index: -2;
+    //     position: absolute;
+    //     z-index: -2;
 
-        inset: 0;
+    //     inset: 0;
 
-        background-image: linear-gradient(
-            45deg,
-            hsl(167, 30%, 70%) 0%,
-            hsl(213, 70%, 50%) 100%
-        );
+    //     background-image: linear-gradient(
+    //         45deg,
+    //         hsl(167, 30%, 70%) 0%,
+    //         hsl(213, 70%, 50%) 100%
+    //     );
 
-        border-radius: 0.75em;
+    //     border-radius: 0.75em;
 
-    }
+    // }
 
-    .weird-button-over {
+    // .weird-button-over {
 
-        position: absolute;
-        z-index: 1;
-        top: 50%;
-        left: 50%;
-        translate: -50% -50%;
+    //     position: absolute;
+    //     z-index: 1;
+    //     top: 50%;
+    //     left: 50%;
+    //     translate: -50% -50%;
 
-        font-family: 'Major Mono Display', monospace;
-        font-size: 1.3rem;
-        text-transform: lowercase;
+    //     font-family: 'Major Mono Display', monospace;
+    //     font-size: 1.3rem;
+    //     text-transform: lowercase;
 
-    }
+    // }
 
-    .weird-button:hover .weird-button-over {
-        visibility: hidden;
-    }
+    // .weird-button:hover .weird-button-over {
+    //     visibility: hidden;
+    // }
 
-    @function randomNum($min, $max) {
+    // @function randomNum($min, $max) {
 
-        $r: random();
-        $res: $min + floor($r * (($max - $min) + 1));
+    //     $r: random();
+    //     $res: $min + floor($r * (($max - $min) + 1));
 
-        @return $res;
+    //     @return $res;
 
-    }
+    // }
 
-    @for $i from 1 through $segmentCount + 1 {
+    // @for $i from 1 through $segmentCount + 1 {
 
-        $modifiers: 1, -1;
+    //     $modifiers: 1, -1;
 
-        $radius: 50;
-        $x: randomNum($radius, $radius * 2) * nth($modifiers, random(length($modifiers)));
-        $y: randomNum($radius, $radius * 2) * nth($modifiers, random(length($modifiers)));
+    //     $radius: 50;
+    //     $x: randomNum($radius, $radius * 2) * nth($modifiers, random(length($modifiers)));
+    //     $y: randomNum($radius, $radius * 2) * nth($modifiers, random(length($modifiers)));
 
-        .weird-button:hover .weird-button-segment:nth-of-type(#{$i}) {
-            translate: #{$x}px #{$y}px;
-            rotate: #{random(180)}deg;
-        }
+    //     .weird-button:hover .weird-button-segment:nth-of-type(#{$i}) {
+    //         translate: #{$x}px #{$y}px;
+    //         rotate: #{random(180)}deg;
+    //     }
 
-    }
+    // }
 
 </style>
