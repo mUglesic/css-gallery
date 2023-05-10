@@ -9,7 +9,7 @@
 
         <!-- dots -->
 
-        <section>
+        <section id="dots">
 
             <h2>DOTS</h2>
 
@@ -44,7 +44,7 @@
 
         <!-- bars -->
 
-        <section>
+        <section id="bars">
 
             <h2>BARS</h2>
 
@@ -68,7 +68,7 @@
 
         <!-- shapes -->
 
-        <section>
+        <section id="shapes">
 
             <h2>SHAPES</h2>
 
