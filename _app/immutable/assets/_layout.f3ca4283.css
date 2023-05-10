@@ -12,14 +12,65 @@
     src: url('/css-gallery/fonts/Inter-VariableFont_slnt,wght.ttf');
 }
 
+@property --scrollbar_color {
+
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsla(209, 36%, 90%, 0);
+
+}
+
 body {
 
     margin: 0;
     display: flex;
     flex-direction: column;
-    /* place-items: center; */
     min-width: 320px;
     min-height: 100vh;
+
+    overflow-y: overlay;
+
+    transition: --scrollbar_color 500ms 500ms ease-in;
+
+}
+
+body:hover {
+
+    --scrollbar_color: hsla(209, 36%, 90%, 0.4);
+
+    transition: --scrollbar_color 0ms;
+
+}
+
+::-webkit-scrollbar {
+
+    width: 5px;
+    height: 5px;
+
+    background-color: hsla(0, 0%, 0%, 0);
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    /* background-color: hsla(209, 36%, 90%, 0.4); */
+    background-color: var(--scrollbar_color);
+
+    border-radius: 5px;
+
+}
+
+::-webkit-scrollbar:hover {
+
+    width: 10px;
+
+    background-color: hsla(0, 0%, 0%, 0.2);
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background-color: hsl(209, 50%, 45%);
 
 }
 
