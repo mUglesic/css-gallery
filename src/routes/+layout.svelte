@@ -10,26 +10,26 @@
 
 <header>
     
-    <h1 class="header-title"><a href="{base}/">CSS Gallery</a></h1>
+    <h1 class="header-title"><a href="/css-gallery">CSS Gallery</a></h1>
 
     <ul class="header-items" class:opened={opened}>
         <li class="header-item">
-            <a href="{base}/hamburgers">Hamburgers</a>
+            <a href="/css-gallery/hamburgers">Hamburgers</a>
         </li>
         <li class="header-item">
-            <a href="{base}/text">Fancy Text</a>
+            <a href="/css-gallery/text">Fancy Text</a>
         </li>
         <li class="header-item">
-            <a href="{base}/buttons">Buttons</a>
+            <a href="/css-gallery/buttons">Buttons</a>
         </li>
         <li class="header-item">
-            <a href="{base}/loading">Loading Animations</a>
+            <a href="/css-gallery/loading">Loading Animations</a>
         </li>
         <li class="header-item">
-            <a href="{base}/cards">Cards</a>
+            <a href="/css-gallery/cards">Cards</a>
         </li>
         <li class="header-item">
-            <a href="{base}/audio">Audio</a>
+            <a href="/css-gallery/audio">Audio</a>
         </li>
     </ul>
 
